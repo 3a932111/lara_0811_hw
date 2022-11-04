@@ -46,6 +46,10 @@
                 </div>
 
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
+                    <!--新增頁面超連結-->
+                    <div class="ml-4 text-lg leading-7 font-semibold"><a href="{{route('goto about.index',['where3'=>'about'])}}" class="underline text-gray-900 dark:text-white">about</a></div>
+                    <div class="ml-4 text-lg leading-7 font-semibold"><a href="{{route('goto home.index',['where'=>'home'])}}" class="underline text-gray-900 dark:text-white">Home</a></div>
+
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <div class="p-6">
                             <div class="flex items-center">

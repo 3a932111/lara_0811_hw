@@ -15,9 +15,9 @@ use App\Http\Controllers\NewsController;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
 Route::get('/',[HomeController::class,'index']
 )->name("home.index");
@@ -27,3 +27,15 @@ Route::get('/about',[AboutController::class,'index']
 
 Route::get('/news',[NewsController::class,'index']
 )->name("news.index");
+
+Route::get('/{where?}',function (){
+    return view('home');
+})->name("goto home.index");
+
+Route::get('/{where2?}',function (){
+    return view('news');
+})->name("goto news.index");
+
+Route::get('/{where3?}',function (){
+    return view('about');
+})->name("goto about.index");
